@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "cloud_mechanics:block/dust_block"
+    }
+  }
+}

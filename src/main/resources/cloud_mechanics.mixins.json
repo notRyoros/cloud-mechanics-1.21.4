@@ -3,7 +3,6 @@
 	"package": "de.notgyros.cloud_mechanics.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
