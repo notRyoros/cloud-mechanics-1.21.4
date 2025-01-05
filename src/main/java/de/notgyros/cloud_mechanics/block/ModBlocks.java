@@ -26,16 +26,7 @@ public class ModBlocks {
     private static final LinkedHashMap<ResourceLocation, Block> BLOCK_LIST = new LinkedHashMap<>();
     private static final LinkedHashMap<ResourceLocation, Item> BLOCK_ITEM_LIST = new LinkedHashMap<>();
 
-    public static final FallingBlock DUST_BLOCK = registerDefault(
-            "dust_block",
-            properties -> new FallingBlock(properties) {
-                @Override
-                protected MapCodec<? extends FallingBlock> codec() {
-                    return null;
-                }
-            },
-            BlockBehaviour.Properties.ofFullCopy(Blocks.SAND));
-
+    public static final DustBlock DUST_BLOCK = registerDefault("dust_block", DustBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.SAND));
 
 
 

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:netherite_ingot",
+    "/": "minecraft:stick"
+  },
+  "pattern": [
+    " # ",
+    " /#",
+    "/  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "cloud_mechanics:netherite_hammer"
+  }
+}

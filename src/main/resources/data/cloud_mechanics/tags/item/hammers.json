@@ -1,0 +1,10 @@
+{
+  "values": [
+    "cloud_mechanics:wooden_hammer",
+    "cloud_mechanics:stone_hammer",
+    "cloud_mechanics:iron_hammer",
+    "cloud_mechanics:golden_hammer",
+    "cloud_mechanics:diamond_hammer",
+    "cloud_mechanics:netherite_hammer"
+  ]
+}

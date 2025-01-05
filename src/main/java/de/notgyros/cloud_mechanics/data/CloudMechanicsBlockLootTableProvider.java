@@ -1,46 +1,33 @@
 package de.notgyros.cloud_mechanics.data;
 
-import com.google.common.base.Equivalence;
 import de.notgyros.cloud_mechanics.block.ModBlocks;
 
-import de.notgyros.cloud_mechanics.item.ModItems;
 import de.notgyros.cloud_mechanics.tag.TagRegistry;
 import net.minecraft.advancements.critereon.ItemPredicate;
-import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.nbt.TagType;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.world.level.storage.loot.predicates.ExplosionCondition;
 import net.minecraft.world.level.storage.loot.predicates.InvertedLootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
-import org.apache.commons.lang3.ObjectUtils;
 
-import java.sql.Wrapper;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
 import java.util.function.BiConsumer;
-import java.util.stream.Stream;
-
 
 public class CloudMechanicsBlockLootTableProvider extends BlockLootSubProvider {
 
@@ -94,7 +81,7 @@ public class CloudMechanicsBlockLootTableProvider extends BlockLootSubProvider {
                                         LootItem.lootTableItem(Items.REDSTONE)
                                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 4.0F)))
                                                 .when(LootItemRandomChanceCondition.randomChance(0.5F))
-                                                    .when(MatchTool.toolMatches(ItemPredicate.Builder.item().of(this.registries.lookupOrThrow(Registries.ITEM), ItemTags.SHOVELS)))
+                                                    .when(MatchTool.toolMatches(ItemPredicate.Builder.item().of(this.registries.lookupOrThrow(Registries.ITEM), TagRegistry.HAMMERS)))
                                 )
                 )
 
@@ -105,7 +92,7 @@ public class CloudMechanicsBlockLootTableProvider extends BlockLootSubProvider {
                                         LootItem.lootTableItem(Items.GOLD_INGOT)
                                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 4.0F)))
                                                 .when(LootItemRandomChanceCondition.randomChance(0.5F))
-                                                .when(MatchTool.toolMatches(ItemPredicate.Builder.item().of(this.registries.lookupOrThrow(Registries.ITEM), ItemTags.SHOVELS)))
+                                                .when(MatchTool.toolMatches(ItemPredicate.Builder.item().of(this.registries.lookupOrThrow(Registries.ITEM), TagRegistry.HAMMERS)))
                                 )
                 )
 
@@ -113,7 +100,7 @@ public class CloudMechanicsBlockLootTableProvider extends BlockLootSubProvider {
                         LootPool.lootPool()
 
                                 .add(LootItem.lootTableItem(ModBlocks.DUST_BLOCK)
-                                        .when(InvertedLootItemCondition.invert(MatchTool.toolMatches(ItemPredicate.Builder.item().of(this.registries.lookupOrThrow(Registries.ITEM), ItemTags.SHOVELS))))
+                                        .when(InvertedLootItemCondition.invert(MatchTool.toolMatches(ItemPredicate.Builder.item().of(this.registries.lookupOrThrow(Registries.ITEM), TagRegistry.HAMMERS))))
                                 )
                 );
     }

@@ -1,5 +1,8 @@
 {
   "values": [
+    "minecraft:stone",
+    "minecraft:cobblestone",
+
     "cloud_mechanics:dust_block"
   ]
 }

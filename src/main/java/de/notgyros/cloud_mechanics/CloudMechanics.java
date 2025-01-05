@@ -49,8 +49,6 @@ public class CloudMechanics implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
-		ModItemGroups.registerItemGroups();
-
 		OverrideLootTables.registerLootTables();
 
 	}
