@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type" : "minecraft:model",
+    "model": "cloud_mechanics:item/silicon_ingot"
+  }
+}

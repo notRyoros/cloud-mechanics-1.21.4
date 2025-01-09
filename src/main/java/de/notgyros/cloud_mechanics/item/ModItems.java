@@ -23,11 +23,19 @@ public class ModItems {
     private static final LinkedList<Item> NO_GROUP = new LinkedList<>();
 
 
-
+    public static final Item STONE_PIECE = register("stone_piece");
     public static final Item DUST = register("dust");
     public static final Item SAND_POWDER = register("sand_powder");
     public static final Item GRAVEL_DUST = register("gravel_dust");
-    public static final Item STONE_PIECE = register("stone_piece");
+
+    public static final Item COAL_DUST = register("coal_dust");
+    public static final Item IRON_DUST = register("iron_dust");
+    public static final Item GOLD_DUST = register("gold_dust");
+    public static final Item DIAMOND_DUST = register("diamond_dust");
+    public static final Item NETHERITE_DUST = register("netherite_dust");
+
+    public static final Item RAW_SILICON = register("raw_silicon");
+    public static final Item SILICON_INGOT = register("silicon_ingot");
 
     public static final Item WOODEN_HAMMER = register("wooden_hammer", properties -> new HammerItem(ToolMaterial.WOOD, 6.5F, -3.2F, properties));
     public static final Item STONE_HAMMER = register("stone_hammer", properties -> new HammerItem(ToolMaterial.STONE, 6.5F, -3.2F, properties));

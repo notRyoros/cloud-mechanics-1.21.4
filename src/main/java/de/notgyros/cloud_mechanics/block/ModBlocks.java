@@ -28,6 +28,8 @@ public class ModBlocks {
 
     public static final DustBlock DUST_BLOCK = registerDefault("dust_block", DustBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.SAND));
 
+    public static final Block SILICON_BLOCK = registerDefault("silicon_block",Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
+
 
 
     private static <T extends Block> T registerBlock(String id, Function<BlockBehaviour.Properties, T> blockFactory, BlockBehaviour.Properties properties) {

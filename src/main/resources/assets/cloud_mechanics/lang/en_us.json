@@ -5,6 +5,9 @@
   "item.cloud_mechanics.stone_piece": "Stone Piece",
 
   "item.cloud_mechanics.dust_block": "Dust Block",
+  "item.cloud_mechanics.raw_silicon": "Raw Silicon",
+  "item.cloud_mechanics.silicon_ingot": "Silicon Ingot",
+  "item.cloud_mechanics.silicon_block": "Silicon Block",
 
   "item.cloud_mechanics.wooden_hammer": "Wooden Hammer",
   "item.cloud_mechanics.stone_hammer": "Stone Hammer",
@@ -13,7 +16,11 @@
   "item.cloud_mechanics.diamond_hammer": "Diamond Hammer",
   "item.cloud_mechanics.netherite_hammer": "Netherite Hammer",
 
-
+  "item.cloud_mechanics.coal_dust": "Coal Dust",
+  "item.cloud_mechanics.iron_dust": "Iron Dust",
+  "item.cloud_mechanics.gold_dust": "Gold Dust",
+  "item.cloud_mechanics.diamond_dust": "Diamond Dust",
+  "item.cloud_mechanics.netherite_dust": "Netherite Dust",
 
   "itemGroup.cloud_mechanics.cloud_mechanics": "Cloud Mechanics"
 }

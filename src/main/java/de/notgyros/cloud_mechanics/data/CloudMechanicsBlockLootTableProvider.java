@@ -43,6 +43,8 @@ public class CloudMechanicsBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ModBlocks.DUST_BLOCK, block -> this.createDustLootTable(block, registryLookup));
 
+        this.dropSelf(ModBlocks.SILICON_BLOCK);
+
     }
 
     public void generate(BiConsumer<ResourceKey<LootTable>, LootTable.Builder> biConsumer) {
